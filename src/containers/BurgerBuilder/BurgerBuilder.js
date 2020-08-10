@@ -3,7 +3,6 @@ import Auxilary from "../../hoc/Auxilary/Auxilary";
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 import Modal from "../../components/UI/Modal/Modal";
-import { Object } from "prop-types";
 import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import Spinner from '../../components/UI/Spinner/Spinner'
 import axios from '../../axios-orders';
@@ -163,8 +162,9 @@ class BurgerBuilder extends Component {
           modalClosed={this.purchaseCancelHandler}
         >
           {orderSummary}
-          {burger}
+         
         </Modal>
+        {burger}
       </Auxilary>
     );
   }
